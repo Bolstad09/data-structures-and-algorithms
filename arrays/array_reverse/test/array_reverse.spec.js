@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 let arrayReverse= require('../lib/array_reverse.js');
 
