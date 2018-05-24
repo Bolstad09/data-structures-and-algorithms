@@ -5,4 +5,4 @@ Write a function called Binary search which takes in an array and a number. Find
 Write at least three test assertions for each method that you define. Don't use any built in methods
 
 ## Solution
-![Getting Started](../assets/array_binary.JPG)
+![Getting Started](assets/array_binary.JPG)
