@@ -6,4 +6,4 @@ Write at least three test assertions for each method that you define. Don't use 
 
 ## Solution
 
-![Getting Started](../../assets/array_binary.JPG)
+![](../../assets/array_binary.JPG)
