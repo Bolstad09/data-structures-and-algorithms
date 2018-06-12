@@ -1,113 +1,92 @@
+'use strict';
 
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
 
+class LinkedList {
+  constructor() {
+    this.head = null;
+  }
 
+  append(value) {
+    if (!this.head) {
+      this.head = new Node(value);
+    } else {
+      let node = this.head;
+      while (node.next) {
+        node = node.next;
+      }
+      node.next = new Node(value);
+    }
+    // BIG O = O(n)
+  }
 
+  prepend(value) {
+    const newNode = new Node(value);
+    if (!this.head) {
+      this.head = newNode;
+    } else {
+      this.head = newNode;
+      this.head.next = this.head;
+    }
+    // BIG O = O(1)
+  }
 
+  reverse() {
+    if (this.head.next === null) {
+      return this;
+    }
+    else {
+      let curr = this.head;
+      let prev = null;
+      while (curr.next) {
+        let initialNext = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = initialNext;
+      }
+      this.head = curr;
+      this.head.next = prev;
+    }
+    // BIG O = O(n)
+  }
 
+  remove(offset) {
+    let curr = this.head;
+    let count = 1;
+    if (offset === 1) {
+      this.head = null;
+    } while (curr.next) {
+      count++;
+      if (count === offset) {
+        curr.next = curr.next.next;
+      } else if (curr.next.next === null) {
+        curr.next = null;
+      } else {
+        curr = curr.next;
+      }
+    }
+    // BIG O = O(n)
+  }
 
-
-
-
-
-
-
-
-
-append(value) {
-  if (!this.root) {
-    this.root = new ListNode(value);
-
-  } else {
-    let node = this.root;
+  serialize() {
+    let str = '';
+    let node = this.head;
+    if (!node) {
+      return 'x';
+    }
     while (node.next) {
+      str += `${node.value}`;
       node = node.next;
     }
-    node.next = new ListNode(value);
-  };
-};
-// 84
+    str += `${node.value}`;
 
-reverse(value){
-
-
-
-
-
-  let prev = null;
-  let cur = this.root;
-  let initialNext;
-
-  while (cur.next){
-    initialNext = cur.next;
-    cur.next = prev;
-    prev = cur
-    cur =initialNext;
+    return str;
+    // BIG O = O(n)
   }
 }
-
-// 102
-serialize(){
-
-  let str = '';
-  let node = this.root;
-  while (node) {
-    str += '[' + node.value + '] ->';
-    node = node.next;
-   
-  }
-str += '[X]';
-return str;
-}
-
-deserialize(str){
-
-
-}
-prepend(value) {
-  const newNode = new ListNode(value);
-  if (!this.root) {
-    this.root = newNode;
-
-  } else {
-    newNode.next = this.root;
-    this.root = newNode;
-  };
-};
-
-// line 192
-insertBefore(value, newValue){
-  let node = new ListNode(newValue);
-
-  let curret = this.root;
-
-  if (this.root.value === value) {
-    this. root
-
-
-
-
-    //  207
-    break;
-  }else {
-    current = current.next;
-  }
-  }
-
-  node.next = current.next;
-  current.next = node;
-}
-
-insertAfter(value, newValue){
-  let node = new ListNode(newValue);
-  let current = this.root;
-
-  while(current){
-    if(current.value === value) {
-      node.next = current.next;
-      current.next = node;
-      break;
-    }
-    current = current.next;
-  }
-}
-
+module.exports = LinkedList;
