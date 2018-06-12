@@ -1,21 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1526876004415" clover="3.2.0">
-  <project timestamp="1526876004415" name="All files">
-    <metrics statements="24" coveredstatements="24" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3" elements="35" coveredelements="35" complexity="0" loc="24" ncloc="24" packages="3" files="3" classes="3">
-      <package name="array_binary_search.lib">
-        <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <file name="array_binary_search.js" path="/Users/brittanybolstad/codefellows/401/whiteboard/data-structures-and-algorithms/arrays/array_binary_search/lib/array_binary_search.js">
-          <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-          <line num="3" count="1" type="stmt"/>
-          <line num="5" count="1" type="stmt"/>
-          <line num="6" count="3" type="stmt"/>
-          <line num="7" count="3" type="stmt"/>
-          <line num="8" count="19" type="cond" truecount="2" falsecount="0"/>
-          <line num="9" count="2" type="stmt"/>
-          <line num="12" count="3" type="stmt"/>
-        </file>
-      </package>
-      <package name="array_reverse.lib">
+<coverage generated="1528689573585" clover="3.2.0">
+  <project timestamp="1528689573586" name="All files">
+    <metrics statements="63" coveredstatements="62" conditionals="20" coveredconditionals="19" methods="9" coveredmethods="9" elements="92" coveredelements="90" complexity="0" loc="63" ncloc="63" packages="3" files="3" classes="3">
+      <package name="arrays.array_reverse.lib">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="array_reverse.js" path="/Users/brittanybolstad/codefellows/401/whiteboard/data-structures-and-algorithms/arrays/array_reverse/lib/array_reverse.js">
           <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -26,7 +13,7 @@
           <line num="10" count="1" type="stmt"/>
         </file>
       </package>
-      <package name="array_shift.lib">
+      <package name="arrays.array_shift.lib">
         <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
         <file name="array_shift.js" path="/Users/brittanybolstad/codefellows/401/whiteboard/data-structures-and-algorithms/arrays/array_shift/lib/array_shift.js">
           <metrics statements="12" coveredstatements="12" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
@@ -42,6 +29,58 @@
           <line num="16" count="9" type="cond" truecount="2" falsecount="0"/>
           <line num="17" count="4" type="stmt"/>
           <line num="20" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="linked-lists.lab-5-linked-lists.lib">
+        <metrics statements="46" coveredstatements="45" conditionals="14" coveredconditionals="13" methods="7" coveredmethods="7"/>
+        <file name="05-linked-list.js" path="/Users/brittanybolstad/codefellows/401/whiteboard/data-structures-and-algorithms/linked-lists/lab-5-linked-lists/lib/05-linked-list.js">
+          <metrics statements="46" coveredstatements="45" conditionals="14" coveredconditionals="13" methods="7" coveredmethods="7"/>
+          <line num="5" count="25" type="stmt"/>
+          <line num="6" count="25" type="stmt"/>
+          <line num="12" count="13" type="stmt"/>
+          <line num="16" count="23" type="cond" truecount="2" falsecount="0"/>
+          <line num="17" count="10" type="stmt"/>
+          <line num="19" count="13" type="stmt"/>
+          <line num="20" count="13" type="stmt"/>
+          <line num="21" count="9" type="stmt"/>
+          <line num="23" count="13" type="stmt"/>
+          <line num="29" count="2" type="stmt"/>
+          <line num="30" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="31" count="1" type="stmt"/>
+          <line num="33" count="1" type="stmt"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="41" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="42" count="1" type="stmt"/>
+          <line num="45" count="1" type="stmt"/>
+          <line num="46" count="1" type="stmt"/>
+          <line num="47" count="1" type="stmt"/>
+          <line num="48" count="2" type="stmt"/>
+          <line num="49" count="2" type="stmt"/>
+          <line num="50" count="2" type="stmt"/>
+          <line num="51" count="2" type="stmt"/>
+          <line num="53" count="1" type="stmt"/>
+          <line num="54" count="1" type="stmt"/>
+          <line num="60" count="2" type="stmt"/>
+          <line num="61" count="2" type="stmt"/>
+          <line num="62" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="63" count="1" type="stmt"/>
+          <line num="64" count="2" type="stmt"/>
+          <line num="65" count="2" type="stmt"/>
+          <line num="66" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="67" count="0" type="stmt"/>
+          <line num="68" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="69" count="1" type="stmt"/>
+          <line num="71" count="1" type="stmt"/>
+          <line num="78" count="3" type="stmt"/>
+          <line num="79" count="3" type="stmt"/>
+          <line num="80" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="81" count="1" type="stmt"/>
+          <line num="83" count="2" type="stmt"/>
+          <line num="84" count="1" type="stmt"/>
+          <line num="85" count="1" type="stmt"/>
+          <line num="87" count="2" type="stmt"/>
+          <line num="89" count="2" type="stmt"/>
+          <line num="95" count="1" type="stmt"/>
         </file>
       </package>
     </metrics>
