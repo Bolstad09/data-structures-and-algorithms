@@ -1,20 +1,20 @@
 'use strict';
 
-class Node{
+class Node {
   constructor(value) {
     this.value = value,
-    this.next = null;
+      this.next = null;
   }
 }
 
-class Stack{
+class Stack {
   constructor() {
     this.top = null;
   }
 
   push(value) {
     let node = new Node(value);
-    if(!this.top) {
+    if (!this.top) {
       this.top = node;
       return this;
     }
@@ -24,10 +24,10 @@ class Stack{
   }
 
   pop() {
-    if(!this.top) {
+    if (!this.top) {
       return null;
     }
-    if(!this.top.next) {
+    if (!this.top.next) {
       let top = this.top.value;
       this.top = null;
       return top;
@@ -39,10 +39,10 @@ class Stack{
 
   serialize() {
     let str = '';
-    if(!this.top) {
+    if (!this.top) {
       return str;
     }
-    while(this.top.next) {
+    while (this.top.next) {
       str += `${this.top.value} `;
       this.top = this.top.next;
     }
@@ -54,12 +54,12 @@ class Stack{
   static deserialize(str) {
     let newStack = new Stack();
 
-    if(str === '') {
+    if (str === '') {
       return newStack;
     }
     let newArray = str.split(' ');
 
-    for(let i = newArray.length -1; i >= 0 ; i--) {
+    for (let i = newArray.length - 1; i >= 0; i--) {
       newStack.push(newArray[i]);
     }
     return newStack;
@@ -67,8 +67,7 @@ class Stack{
 
 }
 
-
-class Queue{
+class Queue {
   constructor() {
     this.first = null;
     this.last = null;
@@ -76,7 +75,7 @@ class Queue{
 
   enqueue(value) {
     let node = new Node(value);
-    if(!this.first) {
+    if (!this.first) {
       this.first = node;
       this.last = node;
       return this;
@@ -87,10 +86,10 @@ class Queue{
   }
 
   dequeue() {
-    if(!this.first) {
+    if (!this.first) {
       return null;
     }
-    if(this.first.next === null) {
+    if (this.first.next === null) {
       let first = this.first.value;
       this.first = null;
       this.last = null;
@@ -103,40 +102,35 @@ class Queue{
 
   serialize() {
     let str = '';
-    if(!this.first) {
+    if (!this.first) {
       return str;
     }
-    while(this.first.next) {
+    while (this.first.next) {
       str += `${this.first.value} `;
       this.first = this.first.next;
     }
     str += `${this.first.value}`;
-
     return str;
   }
 
   static deserialize(str) {
     let newQueue = new Queue();
 
-    if(str === '') {
+    if (str === '') {
       return newQueue;
     }
     let newArray = str.split(' ');
     console.log(newArray);
-    
-    
-    for(let i = 0; i < newArray.length; i++) {
+
+    for (let i = 0; i < newArray.length; i++) {
       newQueue.enqueue(newArray[i]);
       console.log(newQueue);
     }
     return newQueue;
   }
-
-
 }
 
-
 module.exports = {
-  Stack: Stack, 
+  Stack: Stack,
   Queue: Queue,
 };

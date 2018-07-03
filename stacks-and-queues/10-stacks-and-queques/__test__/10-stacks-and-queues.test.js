@@ -12,7 +12,7 @@ describe('stacks', () => {
   });
 
   it('push 2 nodes', () => {
-    let stack =  new Stack();
+    let stack = new Stack();
     stack.push(1);
     stack.push(2);
     expect(stack.top.value).toBe(2);
@@ -65,7 +65,6 @@ describe('stacks', () => {
   });
 
   it('deserialize should take in an empty string and return null', () => {
-    // let stack = new Stack();
     let actual = Stack.deserialize('');
     expect(actual.top).toBeNull();
   });
